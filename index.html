@@ -4,45 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Young+Serif&display=swap" rel="stylesheet">
   <title>Contact form</title>
 </head>
 <body>
 <div class="main">
-  <h2>Contact Us</h2>
-  <form>
-    <div id="flname">
-      <label for="fname">First Name:</label>
-      <input type="text" id="fname" name="fname">
-      <label  for="lname"> Last Name:</label>
-      <input type="text" id="lname" name="lname">
-    </div>  
-      <div>
-        <label for="email">Email Address:</label>
+
+    <h2>Contact Us</h2>
+    <form>
+      <div id="flname">
+        <div class="field">
+          <label for="fname">First Name<span> *</span></label>
+          <input type="text" id="fname" name="fname">
+        </div>
+        <div class="field">
+          <label for="lname">Last Name<span> *</span></label>
+          <input type="text" id="lname" name="lname">
+        </div>
+      </div>  
+      <div class="emailfield">
+        <label for="email">Email Address<span> *</span></label>
         <input type="email" id="email" name="email">
       </div>
-      <div>
-      Query Type
-      <div>
-        <label for="genEn">General Enquiry</label>
-        <input type="radio" name="querytype" id="genEn">
-        <label for="supR">Support Request</label>
-        <input type="radio" name="querytype" id="supR">
+      <div class="radioContainer">
+        <div class="radio-title">Query Type<span> *</span></div>
+
+        <div class="bothradios">
+          <div class="radio">
+            <input type="radio" name="querytype" id="genEn" onclick="changecolor(this)">
+            <label for="genEn">General Enquiry</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="querytype" id="supR" onclick="changecolor(this)">
+            <label for="supR">Support Request</label>
+            
+          </div>
+        </div>
       </div>
-      <!-- <div>
-        <label for="supR">Support Request</label>
-        <input type="radio" name="querytype" id="supR">
-      </div> -->
-      <dive>
-        <label for="message">Message</label>
+      <div class="message">
+        <label for="message">Message<span> *</span></label>
         <textarea name="message" cols="40" rows="5"></textarea>
-      </dive>
       </div>
-      
-      
-
-  </form>
-
+      <div class="consent">
+        <input type="checkbox" name="consent" id="consent">
+        <label for="consent">I consent to being contacted by the team<span> *</span></label>
+      </div>
+      <button class="submit">Submit</button>
+    </form>
 </div>
-  
+<script src="./js/scripts.js"></script>
 </body>
 </html>

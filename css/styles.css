@@ -1,0 +1,162 @@
+body{
+    background: hsl(148, 38%, 91%);
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+    font-weight: 500;
+    accent-color: hsl(169, 82%, 27%);
+}
+.main{
+    background: white;
+    margin: 6% 16% ;
+    padding: 10px 20px;
+    min-width: 375px;
+    border-radius: 8px;
+    
+}
+
+h2{
+    margin-top: 10px;
+    color: hsl(187, 24%, 22%);
+    font-weight: 700;
+}
+
+#flname {
+  display: flex;
+  justify-content: center;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color:hsl(187, 24%, 22%);
+  
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: solid thin;
+  border-color: hsl(187, 24%, 22%);
+  height: 40px;
+  
+  
+} 
+.field input:focus{
+    outline-color: hsl(169, 82%, 27%);
+    border: solid thin;
+   
+}
+.emailfield{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 10px;
+
+}
+.emailfield input{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: solid thin;
+    border-color: hsl(187, 24%, 22%);
+    height: 40px;
+}
+.emailfield input:focus{
+    outline-color: hsl(169, 82%, 27%);
+}
+.bothradios{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 10px;
+
+   
+}
+.radioContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    color: hsl(187, 24%, 22%);
+    
+}
+.radioContainer input:focus{
+    background-color: brown;
+}
+
+.bothradios input, label,.radio-title{
+    vertical-align: middle;
+    padding: 5px 0;
+    margin: 5px 0;
+    
+}
+
+
+.radio{
+    border: 2px black solid;
+    flex-grow: 1;
+    padding: 5px 20px ;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border:solid thin;
+    border-color: hsl(187, 24%, 22%);
+}
+
+.radio.active{
+    background-color: hsl(148, 38%, 91%);
+    
+}
+.message{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;    
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 10px;
+
+}
+.message textarea{
+    border:solid thin;
+    border-radius: 4px;
+    border-color: hsl(187, 24%, 22%);
+}
+.message textarea:focus{
+    outline-color: hsl(169, 82%, 27%);
+}
+.consent{
+    display: grid;
+    grid-template-columns: 1.5em auto;
+    gap: 0.5em;
+    line-height: 1.1;
+    color: hsl(187, 24%, 22%);
+    margin-bottom: 10px;
+
+}
+.consent label{
+    font-size: 14px;
+}
+.submit{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+
+}
+span{
+    color: hsl(169, 82%, 27%);
+}
