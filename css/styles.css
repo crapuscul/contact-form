@@ -10,7 +10,7 @@ body{
     background: white;
     margin: 6% 16% ;
     padding: 10px 20px;
-    min-width: 375px;
+    /* min-width: 375px; */
     border-radius: 8px;
     
 }
@@ -36,7 +36,8 @@ h2{
   
 }
 
-.field input {
+.field input, field input:required {
+    cursor: pointer;
   width: 100%;
   box-sizing: border-box;
   border-radius: 4px;
@@ -46,11 +47,18 @@ h2{
   
   
 } 
-.field input:focus{
+.field input:required:invalid{
+    border-color: red;
+}
+.field input:focus {
     outline-color: hsl(169, 82%, 27%);
     border: solid thin;
    
 }
+.field input:hover {
+    border-color: hsl(169, 82%, 27%);   
+}
+
 .emailfield{
     display: flex;
     justify-content: center;
@@ -60,6 +68,7 @@ h2{
 
 }
 .emailfield input{
+    cursor: pointer;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
@@ -69,6 +78,9 @@ h2{
 }
 .emailfield input:focus{
     outline-color: hsl(169, 82%, 27%);
+}
+.emailfield input:hover{
+    border-color:hsl(169, 82%, 27%) ;
 }
 .bothradios{
     width: 100%;
@@ -88,17 +100,16 @@ h2{
     color: hsl(187, 24%, 22%);
     
 }
-.radioContainer input:focus{
-    background-color: brown;
-}
+.bothradios{
+    display: flex;
 
+}
 .bothradios input, label,.radio-title{
     vertical-align: middle;
     padding: 5px 0;
     margin: 5px 0;
     
 }
-
 
 .radio{
     border: 2px black solid;
@@ -108,6 +119,10 @@ h2{
     border-radius: 4px;
     border:solid thin;
     border-color: hsl(187, 24%, 22%);
+}
+.radio:hover{
+    border-color:hsl(169, 82%, 27%);
+    cursor: pointer;
 }
 
 .radio.active{
@@ -125,12 +140,16 @@ h2{
 
 }
 .message textarea{
+    cursor: pointer;
     border:solid thin;
     border-radius: 4px;
     border-color: hsl(187, 24%, 22%);
 }
 .message textarea:focus{
     outline-color: hsl(169, 82%, 27%);
+}
+.message textarea:hover{
+    border-color: hsl(169, 82%, 27%);
 }
 .consent{
     display: grid;
@@ -145,6 +164,7 @@ h2{
     font-size: 14px;
 }
 .submit{
+    cursor: pointer;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -159,4 +179,15 @@ h2{
 }
 span{
     color: hsl(169, 82%, 27%);
+}
+
+/* responsive design */
+
+@media only screen and (max-width: 600px){
+    #flname{
+        flex-direction: column;
+    }
+    .bothradios{
+        flex-direction: column;
+    }
 }
