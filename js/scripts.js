@@ -8,6 +8,10 @@ function changecolor(selectedRadio){
         selectedRadio.closest('.radio').classList.add("active");
      }
 }
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission (page reload)
+    submitForm(); // Call your custom validation and submission function
+});
 function submitForm(){
    const firstName = document.getElementById("fname").value;
    const lastName = document.getElementById("lname").value;
@@ -72,17 +76,25 @@ function submitForm(){
 
     if (isNotValid) {
         console.log("Form validation failed");
-        return false; // Prevent form submission
+        return; // Prevent form submission
+    }else{
+        showSnackbar();
+        // Optionally, send the form data to a server
+        // sendFormData({firstName, lastName, emailv, messageV, consentV});
+
+        // Reset the form after successful submission
+        document.getElementById('contactForm').reset();
+    
+
+    }
+    function showSnackbar() {
+        const snackBarel = document.getElementById('snackbar');
+        snackBarel.classList.add("show");
+        setTimeout(function() {
+            snackBarel.classList.remove("show");
+        }, 3000);
+      
     }
 
-    document.write("Form submitted successfully");
-    return true; // Allow form submission
-        
-    }
 
-// trigger on submit button
-// grab html element input values 
-// check if its valid 
-// if valid print succeed else print not succeed
-// render the results on the screen
-// on succeed reset the state of the screen and render a message in a container 
+}

@@ -8,12 +8,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Young+Serif&display=swap" rel="stylesheet">
   <title>Contact form</title>
+  
 </head>
 <body>
+  
 <div class="main">
 
+  <div id="snackbar">
+    <div id="msg-sent">
+      <img src="/assets/images/icon-success-check.svg" alt="checkbox" ><span> Message Sent!</span>
+     
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+    
+  </div>
     <h2>Contact Us</h2>
-    <form id="form" onsubmit="return submitForm()" >
+
+    <form id="contactForm" >
       <div id="flname">
         <div class="field">
           <label for="fname">First Name<span> *</span></label>
@@ -59,9 +70,12 @@
         
       </div>
       <p id="cnstError"></p>
-      <button type="submit" class="submit" form="form">Submit</button>
+      <button type="submit" class="submit" >Submit</button>
+      
     <!-- </form> -->
+
 </div>
+
 <script src="./js/scripts.js"></script>
 </body>
 </html>
