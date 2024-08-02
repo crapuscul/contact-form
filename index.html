@@ -13,46 +13,54 @@
 <div class="main">
 
     <h2>Contact Us</h2>
-    <form>
+    <form id="form" onsubmit="return submitForm()" >
       <div id="flname">
         <div class="field">
           <label for="fname">First Name<span> *</span></label>
-          <input type="text" id="fname" name="fname" required>
+          <input type="text" id="fname" name="fname" >
+          <p id="fnameError"></p>
         </div>
         <div class="field">
           <label for="lname">Last Name<span> *</span></label>
           <input type="text" id="lname" name="lname">
+          <p id="lnameError"></p>
         </div>
       </div>  
       <div class="emailfield">
         <label for="email">Email Address<span> *</span></label>
         <input type="email" id="email" name="email">
+        <p id="emailError"></p>
       </div>
       <div class="radioContainer">
         <div class="radio-title">Query Type<span> *</span></div>
 
         <div class="bothradios">
           <div class="radio">
-            <input type="radio" name="querytype" id="genEn" onclick="changecolor(this)">
+            <input type="radio" name="querytype" id="genEn" value="General Enquiry" onclick="changecolor(this)">
             <label for="genEn">General Enquiry</label>
           </div>
           <div class="radio">
-            <input type="radio" name="querytype" id="supR" onclick="changecolor(this)">
+            <input type="radio" name="querytype" id="supR" value="Support Request" onclick="changecolor(this)">
             <label for="supR">Support Request</label>
             
           </div>
+          
         </div>
+        <p id="radioError"></p>
       </div>
       <div class="message">
-        <label for="message">Message<span> *</span></label>
-        <textarea name="message" cols="40" rows="5"></textarea>
+        <label for="msg">Message<span> *</span></label>
+        <textarea id="msg" name="message" cols="40" rows="5" ></textarea>
+        <p id="msgError"></p>
       </div>
       <div class="consent">
-        <input type="checkbox" name="consent" id="consent">
+        <input type="checkbox" name="consent" id="consent" value="checked">
         <label for="consent">I consent to being contacted by the team<span> *</span></label>
+        
       </div>
-      <button class="submit">Submit</button>
-    </form>
+      <p id="cnstError"></p>
+      <button type="submit" class="submit" form="form">Submit</button>
+    <!-- </form> -->
 </div>
 <script src="./js/scripts.js"></script>
 </body>
